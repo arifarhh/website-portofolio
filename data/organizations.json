@@ -1,0 +1,34 @@
+{
+    "organizations": [
+        {
+            "role": "Staff Ahli Advokesma BEM FILKOM 2024",
+            "entity": "Badan Ekesekutif Mahasiswa Fakultas Ilmu Komputer, Universitas Brawijaya",
+            "period": "2024 - 2025",
+            "description": "Menjadi PJ program kerja Kabar Beasiswa dengan mengelola konten informasi seputar beasiswa yang sedang buka pendaftaran melalui postingan Instagram, Telegram, serta Notion Kabar Beasiswa."
+        },
+        {
+            "role": "Volunteer Yoters",
+            "entity": "YOT Edukasi & Aksi",
+            "period": "Mei 2025",
+            "description": "Menyampaikan materi literasi keuangan dasar serta teknik ramah lingkungan dengan media visual menyenangkan kepada anak-anak."
+        },
+        {
+            "role": "Staff Humas RAJA Brawijaya 2024",
+            "entity": "Rangkaian Jelajah Alamater Universitas Brawijaya",
+            "period": "Juli - Agustus 2024",
+            "description": "Merancang aset visual kampanye webinar nasional dan mengelola saluran media komunikasi resmi dengan interaksi audiens naik 40%."
+        },
+        {
+            "role": "Anggota Departemen Humas UMAR",
+            "entity": "Unit Mahasiswa Masjid Raden Patah",
+            "period": "2024 - 2025",
+            "description": "Merancang aset visual kampanye webinar nasional dan mengelola saluran media komunikasi resmi dengan interaksi audiens naik 40%."
+        },
+        {
+            "role": "Ketua Departemen Humas UMAR",
+            "entity": "Unit Mahasiswa Masjid Raden Patah",
+            "period": "2025 - 2026",
+            "description": "Merancang aset visual kampanye webinar nasional dan mengelola saluran media komunikasi resmi dengan interaksi audiens naik 40%."
+        }
+    ]
+}

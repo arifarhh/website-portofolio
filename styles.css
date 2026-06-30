@@ -1,0 +1,52 @@
+/* Optimasi rendering hardware acceleration untuk elemen yang akan dianimasikan */
+.gsap-reveal, .gsap-stagger-card, .gsap-timeline-item {
+    will-change: transform, opacity;
+}
+
+/* Animated Aurora / Gradient Background Premium */
+/* Background Biru Langit Cerah (Sky Blue) */
+.premium-bg {
+    /* Menggunakan gradien halus dari biru sangat muda ke biru langit cerah */
+    background: linear-gradient(135deg, #f0f9ff 0%, #bae6fd 100%);
+    background-attachment: fixed;
+}
+
+/* Animasi untuk membuat background bergerak halus */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* --- Animasi Infinite Marquee (Skill Berjalan) --- */
+.marquee-track {
+    display: flex;
+    width: max-content;
+    /* Ubah '20s' menjadi lebih besar jika ingin jalannya lebih lambat */
+    animation: marquee 20s linear infinite; 
+}
+
+/* Opsional: Membuat putaran berhenti saat mouse diarahkan (Hover) */
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}

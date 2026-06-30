@@ -1,0 +1,174 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "myJournal",
+            "description": "Website jurnal digital pribadi dengan implementasi arsitektur Model-View-Controller (MVC).",
+            "shortDesc": "Aplikasi jurnal digital dengan enkripsi data dan arsitektur MVC yang robust.",
+            "fullDescription": "myJournal adalah platform jurnal digital yang memprioritaskan keamanan dan privasi pengguna. Dibangun dengan arsitektur Model-View-Controller yang solid, aplikasi ini menyediakan pengalaman menulis jurnal yang mulus dan aman. Setiap entri jurnal dienkripsi sebelum disimpan di database, memastikan bahwa pemikiran pribadi Anda tetap rahasia.",
+            "image": "https://images.unsplash.com/photo-1516321349394-0f7db0bbcaf2?w=1200&h=600&fit=crop",
+            "features": [
+                "Enkripsi end-to-end untuk semua entri jurnal",
+                "Arsitektur MVC yang clean dan maintainable",
+                "Pencarian jurnal dengan filter dan tag",
+                "Backup otomatis ke cloud storage",
+                "Export jurnal dalam berbagai format (PDF, Word)"
+            ],
+            "tags": ["PHP", "MySQL", "Tailwind CSS"],
+            "status": "Selesai",
+            "duration": "3 bulan",
+            "teamSize": "1 orang",
+            "links": [
+                {"title": "Live Demo", "url": "https://example.com", "icon": "fa-globe"},
+                {"title": "GitHub Repository", "url": "https://github.com", "icon": "fa-github"}
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Peci Batik Arifa",
+            "description": "Landing page responsif untuk peci batik Jogokariyan dengan katalog terstruktur, integrasi WhatsApp untuk tanya jawab, dan checkout langsung via Lazada.",
+            "shortDesc": "Landing page e-commerce responsif untuk Peci Batik Jogokariyan, menampilkan katalog produk terstruktur dengan integrasi untuk pertanyaan langsung melalui WhatsApp dan proses checkout Lazada yang disederhanakan.",
+            "fullDescription": "Sebuah landing page produk yang responsif, dikembangkan menggunakan HTML, CSS, dan JavaScript, yang dirancang secara khusus untuk memamerkan dan menjual produk Peci Batik Jogokariyan. Saat ini proyek tersebut masih dalam tahap pengembangan aktif (work-in-progress). Platform ini menghadirkan fitur katalog terstruktur yang menampilkan berbagai kategori, jenis, dan harga produk secara rapi. Untuk mengoptimalkan dan menyederhanakan perjalanan pelanggan (customer journey), saya membangun integrasi yang mulus agar pengguna dapat terhubung langsung ke WhatsApp untuk sesi tanya jawab, serta mengarahkan mereka secara otomatis ke Lazada untuk proses pembayaran (checkout) yang mudah dan praktis.",
+            "image": "https://images.unsplash.com/photo-1460925895917-adf4e5e379f8?w=1200&h=600&fit=crop",
+            "features": [
+                "Katalog Produk Terstruktur",
+                "Informasi Harga dan Detail",
+                "Integrasi WhatsApp",
+                "Integrasi Checkout (Lazada)",
+                "Desain yang Responsif"
+            ],
+            "tags": ["Vanilla JS", "Tailwind CSS"],
+            "status": "On-Proses",
+            "duration": "3 bulan",
+            "teamSize": "1 orang",
+            "links": [
+                {"title": "Live Demo", "url": "https://example.com", "icon": "fa-globe"},
+                {"title": "GitHub Repository", "url": "https://github.com", "icon": "fa-github"},
+                {"title": "Case Study", "url": "https://example.com/case-study", "icon": "fa-file-alt"}
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Ideas List Web Application",
+            "description": "Aplikasi web list ide kreatif yang dibangun menggunakan React.js dan Berfokus pada interaksi UI modern (smart header, parallax banner) dan optimasi data dinamis (sorting, pagination) dengan sinkronisasi state ke URL browser agar data tidak hilang saat halaman di-refresh.",
+            "shortDesc": "Sebuah platform web list ide kreatif yang dibangun menggunakan React.js untuk pemenuhan studi kasus seleksi magang Frontend Developer",
+            "fullDescription": "Proyek ini merupakan platform web list ide kreatif yang saya bangun secara mandiri sebagai bagian dari pemenuhan studi kasus seleksi teknis magang Frontend Developer. Aplikasi ini menyediakan fitur pemfilteran artikel berdasarkan tanggal rilis, pengaturan jumlah item per halaman, serta sistem navigasi dinamis yang mampu menjaga konsistensi data tetap utuh meskipun halaman diperbarui (state persistence). Desain halaman ini berfokus pada estetika modern dan interaksi UI yang intuitif—menghadirkan efek parallax pada banner dengan slanted shape, smart sticky header yang responsif terhadap arah gerakan scroll, serta optimasi performa melalui teknik lazy loading gambar untuk memastikan pengalaman menjelajah yang cepat, rapi, dan responsif.",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop",
+            "features": [
+                "Smart Fixed Header",
+                "Slanted Parallax Banner",
+                "URL State Persistence",
+                "Dynamic Sorting",
+                "Custom Show per Page",
+                "Dynamic Pagination",
+                "Image Lazy Loading",
+                "Reverse Proxy Integration"
+
+            ],
+            "tags": ["React.js", "vite"],
+            "status": "Selesai",
+            "duration": "2 hari bulan",
+            "teamSize": "1 orang",
+            "links": [
+                {"title": "Live Demo", "url": "https://project-test-suitschool-farhah.netlify.app/", "icon": "fa-globe"},
+                {"title": "GitHub Repository", "url": "https://github.com/farhahmutiaraa13/project-test-farhah.git", "icon": "fa-github"}
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Rek a Route",
+            "description": "Sistem perencana rute transportasi umum pintar berbasis web dengan dukungan peta dinamis dan visual rute modular.",
+            "shortDesc": "Platform cerdas untuk merencanakan rute transportasi umum dengan visualisasi peta real-time.",
+            "fullDescription": "Rek a Route adalah solusi inovatif yang dirancang untuk memudahkan pengguna dalam merencanakan perjalanan mereka menggunakan transportasi umum. Dengan fitur pencarian rute yang intuitif dan peta interaktif yang menggunakan Leaflet.js, pengguna dapat dengan mudah menemukan rute tercepat dan termurah. Sistem ini juga menampilkan informasi real-time tentang kedatangan kendaraan dan estimasi waktu tiba.",
+            "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
+            "features": [
+                "Pencarian rute transportasi umum yang cepat dan akurat",
+                "Peta interaktif dengan visualisasi rute real-time",
+                "Estimasi waktu tiba dan biaya perjalanan",
+                "Interface responsif untuk desktop dan mobile",
+                "Integrasi dengan API transportasi publik lokal"
+            ],
+            "tags": ["JavaScript", "HTML5", "CSS3"],
+            "status": "Selesai",
+            "duration": "3 bulan",
+            "teamSize": "5 orang",
+            "links": [
+                {"title": "Live Demo", "url": "https://example.com", "icon": "fa-globe"},
+                {"title": "GitHub Repository", "url": "https://github.com", "icon": "fa-github"},
+                {"title": "Project Docs", "url": "https://example.com/docs", "icon": "fa-book"}
+            ]
+        },
+        {
+            "id": 5,
+            "title": "MyShop",
+            "description": "Sistem perencana rute transportasi umum pintar berbasis web dengan dukungan peta dinamis dan visual rute modular.",
+            "shortDesc": "Platform cerdas untuk merencanakan rute transportasi umum dengan visualisasi peta real-time.",
+            "fullDescription": "Rek a Route adalah solusi inovatif yang dirancang untuk memudahkan pengguna dalam merencanakan perjalanan mereka menggunakan transportasi umum. Dengan fitur pencarian rute yang intuitif dan peta interaktif yang menggunakan Leaflet.js, pengguna dapat dengan mudah menemukan rute tercepat dan termurah. Sistem ini juga menampilkan informasi real-time tentang kedatangan kendaraan dan estimasi waktu tiba.",
+            "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
+            "features": [
+                "Pencarian rute transportasi umum yang cepat dan akurat",
+                "Peta interaktif dengan visualisasi rute real-time",
+                "Estimasi waktu tiba dan biaya perjalanan",
+                "Interface responsif untuk desktop dan mobile",
+                "Integrasi dengan API transportasi publik lokal"
+            ],
+            "tags": ["JavaScript", "HTML5", "CSS3"],
+            "status": "Selesai",
+            "duration": "3 bulan",
+            "teamSize": "5 orang",
+            "links": [
+                {"title": "Live Demo", "url": "https://example.com", "icon": "fa-globe"},
+                {"title": "GitHub Repository", "url": "https://github.com", "icon": "fa-github"},
+                {"title": "Project Docs", "url": "https://example.com/docs", "icon": "fa-book"}
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Rek a Route",
+            "description": "Sistem perencana rute transportasi umum pintar berbasis web dengan dukungan peta dinamis dan visual rute modular.",
+            "shortDesc": "Platform cerdas untuk merencanakan rute transportasi umum dengan visualisasi peta real-time.",
+            "fullDescription": "Rek a Route adalah solusi inovatif yang dirancang untuk memudahkan pengguna dalam merencanakan perjalanan mereka menggunakan transportasi umum. Dengan fitur pencarian rute yang intuitif dan peta interaktif yang menggunakan Leaflet.js, pengguna dapat dengan mudah menemukan rute tercepat dan termurah. Sistem ini juga menampilkan informasi real-time tentang kedatangan kendaraan dan estimasi waktu tiba.",
+            "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
+            "features": [
+                "Pencarian rute transportasi umum yang cepat dan akurat",
+                "Peta interaktif dengan visualisasi rute real-time",
+                "Estimasi waktu tiba dan biaya perjalanan",
+                "Interface responsif untuk desktop dan mobile",
+                "Integrasi dengan API transportasi publik lokal"
+            ],
+            "tags": ["JavaScript", "HTML5", "CSS3"],
+            "status": "Selesai",
+            "duration": "3 bulan",
+            "teamSize": "5 orang",
+            "links": [
+                {"title": "Live Demo", "url": "https://example.com", "icon": "fa-globe"},
+                {"title": "GitHub Repository", "url": "https://github.com", "icon": "fa-github"},
+                {"title": "Project Docs", "url": "https://example.com/docs", "icon": "fa-book"}
+            ]
+        },
+        {
+            "id": 7,
+            "title": "Rek a Route",
+            "description": "Sistem perencana rute transportasi umum pintar berbasis web dengan dukungan peta dinamis dan visual rute modular.",
+            "shortDesc": "Platform cerdas untuk merencanakan rute transportasi umum dengan visualisasi peta real-time.",
+            "fullDescription": "Rek a Route adalah solusi inovatif yang dirancang untuk memudahkan pengguna dalam merencanakan perjalanan mereka menggunakan transportasi umum. Dengan fitur pencarian rute yang intuitif dan peta interaktif yang menggunakan Leaflet.js, pengguna dapat dengan mudah menemukan rute tercepat dan termurah. Sistem ini juga menampilkan informasi real-time tentang kedatangan kendaraan dan estimasi waktu tiba.",
+            "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
+            "features": [
+                "Pencarian rute transportasi umum yang cepat dan akurat",
+                "Peta interaktif dengan visualisasi rute real-time",
+                "Estimasi waktu tiba dan biaya perjalanan",
+                "Interface responsif untuk desktop dan mobile",
+                "Integrasi dengan API transportasi publik lokal"
+            ],
+            "tags": ["JavaScript", "HTML5", "CSS3"],
+            "status": "Selesai",
+            "duration": "3 bulan",
+            "teamSize": "5 orang",
+            "links": [
+                {"title": "Live Demo", "url": "https://example.com", "icon": "fa-globe"},
+                {"title": "GitHub Repository", "url": "https://github.com", "icon": "fa-github"},
+                {"title": "Project Docs", "url": "https://example.com/docs", "icon": "fa-book"}
+            ]
+        }
+    ]
+}

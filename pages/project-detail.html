@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail | Farhah</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../styles.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['DM Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        premiumBlue: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-slate-800 font-sans overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-slate-100 transition-all duration-300 py-4 px-6 md:px-12 flex justify-between items-center">
+        <a href="../index.html" class="text-xl font-bold font-display tracking-tight text-premiumBlue-900">
+            Farhah<span class="text-premiumBlue-500">.</span>
+        </a>
+        <a href="../index.html#projects" class="px-5 py-2.5 rounded-full bg-premiumBlue-900 text-white hover:bg-premiumBlue-600 transition-all shadow-md shadow-premiumBlue-900/10">
+            Kembali ke Proyek
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-24 min-h-screen">
+        <!-- Loading State -->
+        <div id="loading" class="flex items-center justify-center min-h-[400px]">
+            <div class="text-center">
+                <div class="w-12 h-12 rounded-full border-4 border-premiumBlue-100 border-t-premiumBlue-600 animate-spin mx-auto mb-4"></div>
+                <p class="text-slate-600">Memuat detail proyek...</p>
+            </div>
+        </div>
+
+        <!-- Project Detail Content -->
+        <div id="project-detail" class="hidden px-6 md:px-12 lg:px-24 py-24">
+            <div class="max-w-5xl mx-auto">
+                <!-- Back Button -->
+                <a href="../index.html#projects" class="inline-flex items-center gap-2 text-premiumBlue-600 hover:text-premiumBlue-800 font-semibold mb-8 transition-colors">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali ke Proyek
+                </a>
+
+                <!-- Project Header -->
+                <div class="mb-12">
+                    <span class="text-sm font-bold text-premiumBlue-600 uppercase tracking-wider bg-premiumBlue-50 px-3 py-1 rounded border border-premiumBlue-100">Project Detail</span>
+                    <h1 id="project-title" class="text-4xl md:text-5xl font-bold font-display text-premiumBlue-900 mt-4 mb-4"></h1>
+                    <p id="project-short-desc" class="text-lg text-slate-600 leading-relaxed"></p>
+                </div>
+
+                <!-- Project Image -->
+                <div id="project-image-container" class="mb-12 rounded-3xl overflow-hidden shadow-xl">
+                    <img id="project-image" src="" alt="Project" class="w-full h-auto object-cover">
+                </div>
+
+                <!-- Content Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12">
+                    <!-- Main Content -->
+                    <div class="lg:col-span-2">
+                        <!-- Full Description -->
+                        <div class="mb-12">
+                            <h2 class="text-2xl font-bold font-display text-premiumBlue-900 mb-6">Tentang Proyek</h2>
+                            <div id="project-full-desc" class="prose prose-sm text-slate-600 leading-relaxed space-y-4"></div>
+                        </div>
+
+                        <!-- Features -->
+                        <div class="mb-12">
+                            <h2 class="text-2xl font-bold font-display text-premiumBlue-900 mb-6">Fitur Utama</h2>
+                            <ul id="project-features" class="space-y-3"></ul>
+                        </div>
+
+                        <!-- Tech Stack -->
+                        <div class="mb-12">
+                            <h2 class="text-2xl font-bold font-display text-premiumBlue-900 mb-6">Teknologi yang Digunakan</h2>
+                            <div id="project-tags" class="flex flex-wrap gap-3"></div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div>
+                        <!-- Project Info Card -->
+                        <div class="bg-slate-50 rounded-2xl p-8 sticky top-24">
+                            <!-- Status -->
+                            <div class="mb-8">
+                                <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2">Status</h3>
+                                <p id="project-status" class="text-lg font-semibold text-premiumBlue-600"></p>
+                            </div>
+
+                            <!-- Duration -->
+                            <div class="mb-8">
+                                <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2">Durasi</h3>
+                                <p id="project-duration" class="text-lg font-semibold text-slate-700"></p>
+                            </div>
+
+                            <!-- Team Size -->
+                            <div class="mb-8">
+                                <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2">Ukuran Tim</h3>
+                                <p id="project-team" class="text-lg font-semibold text-slate-700"></p>
+                            </div>
+
+                            <!-- Links -->
+                            <div class="border-t border-slate-200 pt-8">
+                                <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Links Terkait</h3>
+                                <div id="project-links" class="space-y-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Projects -->
+                <div class="border-t border-slate-200 pt-12">
+                    <h2 class="text-2xl font-bold font-display text-premiumBlue-900 mb-8">Proyek Lainnya</h2>
+                    <div id="related-projects" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error State -->
+        <div id="error" class="hidden px-6 md:px-12 lg:px-24 py-24">
+            <div class="max-w-2xl mx-auto text-center">
+                <div class="text-6xl text-premiumBlue-600 mb-4"><i class="fa-solid fa-exclamation-circle"></i></div>
+                <h2 class="text-3xl font-bold font-display text-premiumBlue-900 mb-4">Proyek Tidak Ditemukan</h2>
+                <p class="text-slate-600 mb-8">Maaf, proyek yang Anda cari tidak ada.</p>
+                <a href="../index.html#projects" class="px-8 py-4 rounded-xl bg-premiumBlue-600 text-white font-semibold hover:bg-premiumBlue-700 transition-all inline-flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali ke Proyek
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- External Scripts -->
+    <script src="../js/data.js"></script>
+    <script src="../js/project-detail.js"></script>
+</body>
+</html>
