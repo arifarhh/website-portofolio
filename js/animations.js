@@ -45,10 +45,10 @@ function initGsapAnimations() {
             ease: "power2.out"
         });
 
-        // Animasi Berurutan untuk Timeline Organisasi
-        gsap.from(".gsap-timeline-item", {
+        // Animasi berurutan untuk kartu organisasi vertikal
+        gsap.from("#organizations-grid .gsap-stagger-card", {
             scrollTrigger: {
-                trigger: "#organizations-timeline",
+                trigger: "#organizations-grid",
                 start: "top 75%",
             },
             x: -20,

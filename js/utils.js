@@ -27,6 +27,7 @@ function renderSkills() {
 
 // State untuk melacak apakah semua proyek ditampilkan
 let isShowingAllProjects = false;
+let isShowingAllOrganizations = false; 
 
 function renderProjects() {
     const container = document.getElementById('projects-grid');
@@ -113,20 +114,64 @@ function toggleProjects() {
     }
 }
 
+function toggleOrganizations() {
+    isShowingAllOrganizations = !isShowingAllOrganizations;
+    
+    // Render ulang kontennya
+    renderOrganizations();
+    
+    // Jalankan ulang animasi masuk perlahan agar terlihat interaktif
+    if (typeof gsap !== 'undefined') {
+        gsap.fromTo("#organizations-grid .gsap-stagger-card", 
+            { y: 30, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: "power2.out", clearProps: "all" }
+        );
+    }
+}
+
 function renderOrganizations() {
-    const container = document.getElementById('organizations-timeline');
-    container.innerHTML = portfolioData.organizations.map((org, index) => `
-        <div class="gsap-timeline-item relative mb-12">
-            <!-- Bulatan Timeline -->
-            <div class="absolute -left-[39px] top-1.5 w-4 h-4 rounded-full bg-premiumBlue-500 border-4 border-white shadow-sm ring-4 ring-premiumBlue-50"></div>
-            <div>
-                <span class="text-xs font-bold text-premiumBlue-600 uppercase tracking-widest bg-premiumBlue-50 px-2.5 py-1 rounded border border-premiumBlue-100">${org.period}</span>
-                <h3 class="text-xl font-bold font-display text-premiumBlue-900 mt-3">${org.role}</h3>
-                <h4 class="text-slate-500 font-semibold text-sm mt-0.5">${org.entity}</h4>
-                <p class="text-slate-500 text-sm mt-3 leading-relaxed max-w-2xl">${org.description}</p>
+    const container = document.getElementById('organizations-grid');
+    const btnShowMore = document.getElementById('btn-show-more-orgs');
+
+    if (!container) return;
+    
+    // Tentukan jumlah yang ingin ditampilkan di awal
+    const initialCount = 2;
+    
+    // Logika pemotongan data
+    const orgsToShow = isShowingAllOrganizations 
+        ? portfolioData.organizations 
+        : portfolioData.organizations.slice(0, initialCount);
+
+    // Satu kartu per baris agar pengalaman organisasi tersusun memanjang ke bawah.
+    container.className = 'space-y-6';
+    container.innerHTML = orgsToShow.map(org => `
+        <article class="gsap-stagger-card relative overflow-hidden rounded-2xl border border-slate-150 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl md:p-8">
+            <div class="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-premiumBlue-500 to-premiumBlue-900"></div>
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                <div class="min-w-0">
+                    <h3 class="font-display text-xl font-bold text-premiumBlue-900">${org.role}</h3>
+                    <h4 class="mt-1 text-sm font-semibold text-slate-500">${org.entity}</h4>
+                </div>
+                <span class="w-fit shrink-0 rounded-full border border-premiumBlue-100 bg-premiumBlue-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-premiumBlue-600">${org.period}</span>
             </div>
-        </div>
+            <p class="mt-5 max-w-3xl text-sm leading-relaxed text-slate-500">${org.description}</p>
+        </article>
     `).join('');
+
+    // Update teks tombol
+    if (btnShowMore) {
+        btnShowMore.innerHTML = isShowingAllOrganizations 
+            ? `Tampilkan Lebih Sedikit <i class="fa-solid fa-chevron-up"></i>` 
+            : `Lihat Semua Organisasi <i class="fa-solid fa-chevron-down"></i>`;
+        
+        // Sembunyikan tombol jika data tidak mencukupi
+        btnShowMore.style.display = (portfolioData.organizations.length <= initialCount) ? 'none' : 'block';
+    }
+
+    if (typeof ScrollTrigger !== 'undefined') {
+        setTimeout(() => ScrollTrigger.refresh(), 100);
+    }
 }
 
 // --- Fungsi Menyalin ke Clipboard dengan UI Toast ---
