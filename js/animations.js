@@ -55,7 +55,8 @@ function initGsapAnimations() {
             opacity: 0,
             duration: 0.6,
             stagger: 0.2,
-            ease: "power2.out"
+            ease: "power2.out",
+            clearProps: "all"
         });
 
     });
